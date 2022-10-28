@@ -1,24 +1,36 @@
 const chalk = require ('chalk');
-const resolve = require('./md-links1/resolve.js');
-const readFile = require ('./md-links1/readfile.js');
-const getLinks = require ('./md-links1/getlinks.js')
-const readDirectory = require('./md-links1/readDirectory.js')
-const fs = require('fs');
+const extFile = require ('./md-links1/ext-file.js');
+const getLinks = require ('./md-links1/getlinks.js');
+const pathN = require ('path');
+const fs = require ('fs');
+const { exit } = require('process');
 
-
-let arrayMD = [];
-   resolve(pathfile);
-   const fileOrDirectory = fs.lstatSync(pathfile).isDirectory();
-   console.log(fileOrDirectory);
-
-   if (fileOrDirectory === false) {
-    readFile(pathfile, arrayMD);
-   } else {
-     readDirectory(pathfile, arrayMD);
-   }
-
-if(arrayMD.length === 0){
-  return console.log((chalk.inverse.yellow.bold('No markdown files found')))
-}else{
-  getLinks(arrayMD);
+const welcome = () => {
+  console.log(chalk.inverse.rgb(210,175,234)('                                                            '))
+  console.log(chalk.inverse.rgb(210,175,234)('•·.·••·.·• W E L C O M E    T O   M D - L I N K S •·.·••·.·•'))
+  console.log(chalk.inverse.rgb(210,175,234)('                                                            '))
+  console.log('                                                                            ')
 }
+welcome()
+let path = process.argv[2];
+path = pathN.resolve(path);
+path = pathN.normalize(path);
+
+const fileExist = fs.existsSync(path) 
+let arrayMD = [];
+  if (!fileExist) {
+    console.log((chalk.bold.rgb(181,238,185)('❌This path does not exist❌')))
+    exit()
+  } else {
+    console.log((chalk.bold.rgb(181,238,185)('✅This is a valid path ✅')))
+    extFile(path, arrayMD);
+    console.log('                                                                            ')
+    getLinks(arrayMD);
+  
+  }
+
+/*let arrayMD = [];
+   extFile(path, arrayMD);
+   getLinks(arrayMD);
+ 
+*/

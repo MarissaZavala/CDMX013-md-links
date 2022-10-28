@@ -1,3 +1,15 @@
-https://github.com/MarissaZavala/CDMX013-md-links
-https://www.google.com/?client=safari
-https://nodejs.org/api/fs.html
+
+[Promesas MDN Mozilla Web docs](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/all)
+
+[Array.prototype.map() - MDN Mozilla Web docs](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
+
+[Callbacks vs. Promises](https://medium.com/better-programming/callbacks-vs-promises-in-javascript-1f074e93a3b5)
+
+[Broken link](https://google.com/shjdf)
+[Google](https://www.google.com/)
+
+[Google Error](https://www.google.com/jdjdj)
+
+[Twitter](https://twitter.com/)
+
+[Facebook](www.fb.com)
