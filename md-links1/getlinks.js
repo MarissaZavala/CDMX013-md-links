@@ -4,7 +4,7 @@ let linksData=[]
 const getLinks =(arrayMD) =>{
     arrayMD.forEach((file) => {
         const data = fs.readFileSync(file,'utf8');
-        const regExpGetLink = /(((https?:\/\/)|(http?:\/\/)|(www\.))[^\s\n]+)(?=\))/g;
+        const regExpGetLink =/\[(.+)\]\((https?:\/\/.+)\)/gi; /*/\[(.*?)\)/g*/ /*/\[([^\[]+)\](\(.*\))/gm;*/
         let arrayLinks =[...data.matchAll(regExpGetLink)]
 
         if (arrayLinks.length > 0) {

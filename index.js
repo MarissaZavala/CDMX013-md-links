@@ -4,6 +4,9 @@ const getLinks = require ('./md-links1/getlinks.js');
 const pathN = require ('path');
 const fs = require ('fs');
 const { exit } = require('process');
+const validateLinks = require('./md-links1/validate.js');
+const getStats= require ('./md-links1/getstats.js');
+const process =require ('node:process');
 
 const welcome = () => {
   console.log(chalk.inverse.rgb(210,175,234)('                                                            '))
@@ -25,11 +28,14 @@ let arrayMD = [];
     console.log((chalk.bold.rgb(181,238,185)('✅This is a valid path ✅')))
     extFile(path, arrayMD);
     console.log('                                                                            ')
-    getLinks(arrayMD);
+    const arrayLinks = getLinks(arrayMD);
+    validateLinks(arrayLinks);
+   // getStats(arrayLinks)
+    //const arrayLinks = getLinks(arrayMD);
   
   }
 
-/*let arrayMD = [];
+/*let arrayMD = [];     
    extFile(path, arrayMD);
    getLinks(arrayMD);
  

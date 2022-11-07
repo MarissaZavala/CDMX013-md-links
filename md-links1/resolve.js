@@ -14,7 +14,7 @@ const resolve = (pathfile) => {
     if (!file) {
         console.log(chalk.red.bold('INVALID PATH ->', chalk.red(absolutePath)))
     } else {
-        console.log(chalk.green.bold('VALID PATH ->', chalk.red(absolutePath)))
+        console.log(chalk.green.bold('VALID PATH ->', chalk.green(absolutePath)))
     }
 }
 
