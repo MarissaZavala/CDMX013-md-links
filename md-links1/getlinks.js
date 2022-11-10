@@ -16,10 +16,11 @@ const getLinks =(arrayMD) =>{
                 })
                 
             })
-            console.log(chalk.rgb(216,137,255)('LINKS INFORMATION'),linksData)
+            console.log(chalk.rgb(216,137,255)('The file contains the following links:'),linksData)
             
         }      
 })
+
 return linksData
 
 

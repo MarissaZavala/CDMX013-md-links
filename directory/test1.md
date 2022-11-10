@@ -12,4 +12,6 @@
 
 [Twitter](https://twitter.com/)
 
-[Facebook](www.fb.com)
+
+[Twitter](https://twitter.com/)
+
