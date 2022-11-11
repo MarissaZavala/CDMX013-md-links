@@ -23,7 +23,7 @@ if (option === '--validate' || option === '--stats' || option === '--validate --
   mdLinks(path,option).then(() =>{
     console.log('                                                                            ')
     console.log(chalk.inverse.rgb(210,175,234)(' END PROGRAM. Thanks for using MD-Links 👋'));
-    console.log('                                                                            ')
+     console.log('                                                                            ')
     exit()
   
   })
